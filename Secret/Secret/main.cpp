@@ -78,8 +78,7 @@ int main(int argc, const char * argv[])
         if(isprime(i))
             primebox.push_back(i);
     }
-    for(int i(0);i<primenum;++i)
-        cout<<primebox[i]<<endl;
+    //for(int i(0);i<primenum;++i)  cout<<primebox[i]<<endl;
     return 0;
 }
 
