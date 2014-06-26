@@ -23,19 +23,10 @@ void swap(int & a,int & b)
 
 int gcd(int a,int b)
 {
-    if(0 == a)
-        return b;
-    if(0 == b)
+    if (b == 0) {
         return a;
-    if(a > b)
-        swap(a,b);
-    int c;
-    for(c = a % b; c >0; c = a % b)
-    {
-        a = b;
-        b = c;
     }
-    return b;
+    return gcd(b, a % b);
 }
 
 long long PowerMod(long long a, long long b, long long k)
@@ -58,7 +49,7 @@ bool ishusu(int a,int b)
 
 bool isprime(long long n)
 {
-    for(int i(2);i*i<=n;++i)
+    for(int i(2);1LL*i*i<=n;++i)
     {
         if(n%i==0)
             return false;
